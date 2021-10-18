@@ -1,0 +1,200 @@
+@font-face {
+  font-family: Neucha-Regular;
+  src: url(../fonts/Neucha-Regular.ttf);
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  overflow: hidden;
+  cursor: url(../img/Cursor/Cursor-1.png), auto;
+}
+
+.main {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.big-box {
+  height: 60%;
+  width: 60%;
+  min-height: 300px;
+  min-width: 450px;
+  top : calc( 50vh - 60% / 2);
+  left : calc( 50vw - 60%  / 2);
+  position: absolute;
+  text-align: center;
+}
+
+.content-box {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: block;
+  position: absolute;
+  border-radius: 25px;
+}
+
+.casement-box {
+  transition: all 2s linear;
+}
+.casement-text-box {
+  text-align: center;
+  height: 30%;
+  width: 70%;
+  top : calc( 60% - 60% / 2);
+  left : calc( 25% - 75%  / 2);
+  position: relative;
+  font-size: 36px;
+  letter-spacing: 5px;
+  font-family: 'Ruslan Display', cursive, sans-serif;
+  color: hsl(51, 100%, 87%);
+  text-shadow: 0 0 5px hsl(252, 100%, 19%), 0 0 10px hsl(251, 84%, 13%), 0 0 15px hsl(0, 0%, 0%), 0 0 20px hsl(51, 100%, 50%);
+  display: inline-block;
+}
+
+.top-box {
+  -webkit-clip-path: polygon(100% 0, 100% 46%, 73% 48%, 0 46%, 0 0);
+  -moz-clip-path: polygon(100% 0, 100% 46%, 73% 48%, 0 46%, 0 0);
+  clip-path: polygon(100% 0, 100% 46%, 73% 48%, 0 46%, 0 0);
+  background: url(../img/02.png) center no-repeat;
+  background-size: 90% 100%;
+  z-index: 1;
+}
+.bottom-box {
+  -webkit-clip-path: polygon(100% 100%, 100% 46%, 73% 48%, 0 46%, 0 100%);
+  -moz-clip-path: polygon(100% 100%, 100% 46%, 73% 48%, 0 46%, 0 100%);
+  clip-path: polygon(100% 100%, 100% 46%, 73% 48%, 0 46%, 0 100%);
+  background: url(../img/02.png) center no-repeat;
+  background-size: 90% 100%;
+  z-index: 1;
+}
+.center-box {
+  height: 85%;
+  width: 75%;
+  top : calc( 50% - 85% / 2);
+  left : calc( 50% - 75%  / 2);
+  text-align: center;
+  background: url(../img/01.jpg) center no-repeat;
+  background-size: 100% 100%;
+  transition: all 1.3s linear;
+  opacity: 0;
+  -webkit-box-shadow: 0 0 20px 2px hsl(216, 100%, 70%), 0 0 40px 5px hsl(234, 87%, 69%), 0 0 70px 10px hsl(219, 79%, 66%), 0 0 80px 10px hsl(216, 100%, 90%);
+  -moz-box-shadow: 0 0 20px 2px hsl(216, 100%, 70%), 0 0 40px 5px hsl(234, 87%, 69%), 0 0 70px 10px hsl(219, 79%, 66%), 0 0 80px 10px hsl(216, 100%, 90%);
+  box-shadow: 0 0 20px 2px hsl(216, 100%, 70%), 0 0 40px 5px hsl(234, 87%, 69%), 0 0 70px 10px hsl(219, 79%, 66%), 0 0 80px 10px hsl(216, 100%, 90%);
+}
+
+.button {
+  height: 50%;
+  width: 30%;
+  display: inline-block;
+  text-decoration: none;
+  padding: 0.5%;
+  vertical-align: top;
+  position: relative;
+  box-sizing:border-box;
+}
+.button-1 {
+  margin: 5% 15% 2% 2%;
+  cursor: url(../img/Cursor/Cursor-2.png), auto;
+}
+.button-2 {
+  margin: 5% 2% 2% 15%;
+  cursor: url(../img/Cursor/Cursor-3.png), auto;
+}
+
+.text {
+  text-align: center;
+  top: 70%;
+  left: 2%;
+  min-height: 10%;
+  width: 95%;
+  display: inline-block;
+  position: absolute;
+  color: rgb(255, 255, 255);
+  font-size: 26px;
+  font-family: Neucha-Regular, Arial, Helvetica, sans-serif;
+  -webkit-text-shadow: 0 0 10px hsl(252, 100%, 19%), 0 0 10px hsl(251, 84%, 13%), 0 0 15px hsl(0, 0%, 0%);
+  -moz-text-shadow: 0 0 10px hsl(252, 100%, 19%), 0 0 10px hsl(251, 84%, 13%), 0 0 15px hsl(0, 0%, 0%);
+  text-shadow: 0 0 10px hsl(252, 100%, 19%), 0 0 10px hsl(251, 84%, 13%), 0 0 15px hsl(0, 0%, 0%);
+}
+
+.big-box:hover .top-box {
+  top: -40%;
+  opacity: 0;
+  transition: all 0.5s linear;
+}
+.big-box:hover .bottom-box {
+  top: 40%;
+  opacity: 0;
+  transition: all 0.5s linear;
+}
+.big-box:hover .center-box {
+  opacity: 1;
+  z-index: 1;
+}
+
+img {
+  height: 75%;
+  width: auto;
+  max-width: 100%;
+  display: inline-block;
+  margin: auto;
+  border-radius: 25px;
+  opacity: 0;
+  transition: 500ms linear;
+}
+.button-text {
+  height: 25%;
+  width: 100%;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 24px;
+  color: hsl(51, 100%, 87%);
+  font-family: Neucha-Regular, Arial, Helvetica, sans-serif;
+  -webkit-text-shadow: 0 0 10px hsl(252, 100%, 10%), 0 0 10px hsl(251, 84%, 13%), 0 0 15px hsl(0, 0%, 0%);
+  -moz-text-shadow: 0 0 10px hsl(252, 100%, 10%), 0 0 10px hsl(251, 84%, 13%), 0 0 15px hsl(0, 0%, 0%);
+  text-shadow: 0 0 10px hsl(252, 100%, 10%), 0 0 10px hsl(251, 84%, 13%), 0 0 15px hsl(0, 0%, 0%);
+  border: 3px hsl(226, 100%, 66%) solid;
+  border-radius: 40px;
+  background: rgba(116, 149, 255, 0.3);
+  padding-top: 5px;
+  box-sizing: border-box;
+}
+
+.button-1:hover .img-left {
+  opacity: 1;
+  -webkit-box-shadow: 0 0 20px 5px hsl(216, 100%, 90%);
+  -moz-box-shadow: 0 0 20px 5px hsl(216, 100%, 90%);
+  box-shadow: 0 0 20px 5px hsl(216, 100%, 90%);
+}
+.button-2:hover .img-right {
+  opacity: 1;
+  -webkit-box-shadow: 0 0 20px 5px hsl(216, 100%, 90%);
+  -moz-box-shadow: 0 0 20px 5px hsl(216, 100%, 90%);
+  box-shadow: 0 0 20px 5px hsl(216, 100%, 90%);
+}
+
+.button-text:hover {
+  -webkit-box-shadow: 0 0 10px 2px hsl(216, 100%, 70%), 0 0 15px 3px hsl(234, 87%, 69%), 0 0 20px 5px hsl(219, 79%, 66%);
+  -moz-box-shadow: 0 0 10px 2px hsl(216, 100%, 70%), 0 0 15px 3px hsl(234, 87%, 69%), 0 0 20px 5px hsl(219, 79%, 66%);
+  box-shadow: 0 0 10px 2px hsl(216, 100%, 70%), 0 0 15px 3px hsl(234, 87%, 69%), 0 0 20px 5px hsl(219, 79%, 66%);
+  border: 2px hsl(226, 100%, 66%) solid;
+  background: rgba(116, 149, 255, 0.5);
+}
+.button-text:active {
+  -webkit-box-shadow: 0 0 50px 10px hsl(216, 100%, 90%);
+  -moz-box-shadow: 0 0 50px 10px hsl(216, 100%, 90%);
+  box-shadow: 0 0 50px 10px hsl(216, 100%, 90%);
+  border: 4px hsl(226, 84%, 81%) solid;
+  background: rgba(116, 149, 255, 0.8);
+}
